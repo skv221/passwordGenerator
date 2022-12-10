@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Create your password</title>
+</head>
+<body>
+    <script src="index.js"></script>
+    <div id="card">
+        <div class="container">
+            <h1>Password Generator</h1>
+            <h4>Create a strong password with the length of your requirement</h4>
+            <form class="container" onsubmit="return false">
+                <label for="num-input">Enter the length of your password:</label>
+                <input type="number" min="10" max="20" id="num-input" name="num-input" onfocus="textRemover()" required>
+                <button type="submit" class="btn" onclick="makePassword()">Submit to generate the password</button>
+            </form>
+            <h3>The created password is:</h3>
+            <h2 id="password">0</h2>
+            <button type="submit" class="btn" onclick="copy()">Click to copy</button>
+        </div>
+    </div>
+    <div id="snackbar">Copied to the clickboard !!!</div>
+</body>
+</html>
